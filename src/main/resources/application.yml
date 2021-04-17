@@ -1,0 +1,31 @@
+spring:
+  profiles:
+    active: local
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+    database: mysql
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+        format_sql: true
+    open-in-view: false
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/food
+    username: root
+    password: strongpassword
+    driver-class-name: com.mysql.cj.jdbc.Driver
+handlebars:
+  suffix: .html
+  enabled: true
+security:
+  jwt:
+    token:
+      secret-key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIiLCJuYW1lIjoiSm9obiBEb2UiLCJpYXQiOjE1MTYyMzkwMjJ9.ih1aovtQShabQ7l0cINw4k1fagApg3qLWiB8Kt59Lno
+      expire-length: 3600000
+
+
+
